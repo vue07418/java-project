@@ -10,7 +10,7 @@ node('linux') {
        sh 'ant -f build.xml -v'
    }
    
-   stage('Deploy') [
+   stage('Deploy') {
        sh 'aws s3 cp rectangle-*.jar s3://week-11-jenkins-javapipeline-assignment/rectangle-*.jar'
    }
    
